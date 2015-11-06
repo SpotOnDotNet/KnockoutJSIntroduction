@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />    
+    <link href="../../content/bootstrap.css" rel="stylesheet" />
+    <link href="../../content/main.css" rel="stylesheet" />    
+</head>
+<body>  
+    <header>
+        <div class="bs-docs-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h1>Knockout - <span>Components</span></h1>
+                    </div>
+                    <div class="col-sm-2 padding-top-5">
+                        <button type="button" class="btn btn-default pull-right " aria-label="Left Align">
+                            <a href="\Index5.html">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true">
+                                </span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <div class="container padding-top-20">
+        <div class="panel panel-info">
+            <div class="panel-heading"></div>
+            <div class="panel-body">
+
+                <div data-bind="component: 'admin-header'"></div>
+                
+                <div data-bind="component: { name: 'admin-header', params: { pageTitle: 'Yo!'}}"></div>
+                
+                <admin-header params="pageTitle: 'Hello'"></admin-header>
+
+            </div>
+        </div>
+    </div>             
+
+    <script src="../../Scripts/require.js" type="text/javascript" data-main="../../scripts/main1.js"></script>
+</body>
+</html>

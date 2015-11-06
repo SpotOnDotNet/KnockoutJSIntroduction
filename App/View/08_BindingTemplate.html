@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="../../content/bootstrap.css" rel="stylesheet" />
+    <link href="../../content/main.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-2.1.4.min.js"></script>    
+    <script src="../../Scripts/knockout-3.3.0.debug.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+    <script src="../Data/SampleProducts.js"></script> 
+    <script src="../ViewModel/SharedModels.js"></script>  
+    <script src="../ViewModel/08_BindingTemplate.js"></script>   
+</head>
+<body>
+    <header>
+        <div class="bs-docs-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h1>Knockout - <span>Built-in bindings (Template)</span></h1>
+                    </div>
+                    <div class="col-sm-2 padding-top-5">
+                        <button type="button" class="btn btn-default pull-right " aria-label="Left Align">
+                            <a href="\Index3.html">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true">
+                                </span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container padding-top-20">
+        <div class="panel panel-info">
+            <div class="panel-heading">template (element)</div>
+            <div class="panel-body">
+                <div data-bind="template: {name: 'personTemplate', data: person }"></div>                
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">template (list)</div>
+            <div class="panel-body">
+                <input type="text" data-bind="value: itemToAdd, valueUpdate: 'afterkeydown'" />
+                <button data-bind="click: addItem">Add</button>
+                <ul data-bind="template: { name: 'prodTemplate', foreach: products }"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script id="personTemplate" type="text/html">
+        Imię: <span data-bind="text: name"></span><br/>
+        Wiek: <span data-bind="text: age"></span>
+    </script> 
+
+    <script id="prodTemplate" type="text/html">        
+        <li>
+            <span data-bind="text: name"></span>
+        </li>
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="../../content/toastr.css" rel="stylesheet" />
+    <link href="../../content/bootstrap.css" rel="stylesheet" />
+    <link href="../../content/main.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-2.1.4.min.js"></script>    
+    <script src="../../Scripts/knockout-3.3.0.debug.js"></script>
+    <script src="../../Scripts/toastr.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+    <script src="../Data/SampleProducts.js"></script>
+    <script src="../ViewModel/SharedModels.js"></script>  
+    <script src="../ViewModel/04_ObservablesArray.js"></script>   
+</head>
+<body>
+    <header>
+        <div class="bs-docs-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h1>Knockout - <span>Observables Array</span></h1>
+                    </div>
+                    <div class="col-sm-2 padding-top-5">
+                        <button type="button" class="btn btn-default pull-right " aria-label="Left Align">
+                            <a href="\Index2.html">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true">
+                                </span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container padding-top-20">
+        <div class="panel panel-info">
+            <div class="panel-heading">Lista produktów</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <form class="form-horizontal">
+                            <div class="form-group form-inline">                                
+                                <button class="btn btn-default" data-bind="click: load">Wczytaj v1</button>
+                                <button class="btn btn-default" data-bind="click: loadBetter">Wczytaj v2</button>
+                                <button class="btn btn-default" data-bind="click: clear">Wyczyść</button>
+                            </div>
+                            <div class="form-group">
+                                <select size="10" class="form-control" multiple="multiple" data-bind="options:products, selectedOptions:selectedProducts, optionsText: 'name'"></select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

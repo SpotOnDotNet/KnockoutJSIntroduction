@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="content/bootstrap.css" rel="stylesheet" />
+    <link href="content/main.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.4.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>     
+</head>
+<body>
+    <header>
+        <div class="bs-docs-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h1>Knockout - <span>Components</span></h1>
+                    </div>
+                    <div class="col-sm-2 padding-top-5">
+                        <button type="button" class="btn btn-default pull-right " aria-label="Left Align">
+                            <a href="Index.html">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true">
+                                </span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container intro-cont-left">
+        <pre>ko.components.register('like-widget', {
+    viewModel: function(params) {
+        // Data: value is either null, 'like', or 'dislike'
+        this.chosenValue = params.value;
+         
+        // Behaviors
+        this.like = function() { this.chosenValue('like'); }.bind(this);
+        this.dislike = function() { this.chosenValue('dislike'); }.bind(this);
+    },
+    template:
+        '&lt;div class="like-or-dislike" data-bind="visible: !chosenValue()"&gt;
+            &lt;button data-bind="click: like"&gt;Like it&lt;/button&gt;
+            &lt;button data-bind="click: dislike"&gt;Dislike it&lt;/button&gt;
+         &lt;/div&gt;
+         &lt;div class="result" data-bind="visible: chosenValue"&gt;
+            You &lt;strong data-bind="text: chosenValue"&gt;&lt;/strong&gt; it\
+         &lt;/div&gt;'
+});
+        </pre>
+    </div>
+    <div class="container intro-cont">
+        <span><a href="App/View/10_Compnents.html">Demo 1</a> | </span>
+        <span><a href="App/View/12_Compnents.html">Demo 2</a></span>        
+    </div>    
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="../../content/bootstrap.css" rel="stylesheet" />
+    <link href="../../content/main.css" rel="stylesheet" />
+    <script src="../../Scripts/jquery-2.1.4.min.js"></script>    
+    <script src="../../Scripts/knockout-3.3.0.debug.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+    <script src="../ViewModel/05_BindingTextAndAppearance.js"></script>   
+</head>
+<body>
+    <header>
+        <div class="bs-docs-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-10">
+                        <h1>Knockout - <span>Built-in bindings (Text and Appearance)</span></h1>
+                    </div>
+                    <div class="col-sm-2 padding-top-5">
+                        <button type="button" class="btn btn-default pull-right " aria-label="Left Align">
+                            <a href="\Index3.html">
+                                <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true">
+                                </span>
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container padding-top-20">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">visible</div>
+                    <div class="panel-body">
+                        <div data-bind="visible: messageVisible">Tekst 1 Teskt 1 Tekst 1 Teskt 1 Tekst 1 Teskt 1</div>
+                        <div data-bind="visible: !messageVisible()">Tekst 2 Tekst 2 Tekst 2 Tekst 2 Tekst 2 Tekst 2 </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">text</div>
+                    <div class="panel-body">
+                        <span data-bind="text: message"></span>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <div class="row">           
+            <div class="col-xs-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">html</div>
+                    <div class="panel-body">
+                        <div data-bind="html: list"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">css</div>
+                    <div class="panel-body">
+                        <div data-bind="css: { active: isActive }">Tekst na czerwono</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">style</div>
+                    <div class="panel-body">
+                        <div data-bind="style: { color: isActive ? 'blue' : '' }">Tekst na niebiesko</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">attr</div>
+                    <div class="panel-body">
+                        <div data-bind="attr: { title: titleMsg }">To już ostani przykład....</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>       
+</body>
+</html>
